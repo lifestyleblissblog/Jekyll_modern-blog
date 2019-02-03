@@ -178,7 +178,6 @@ var Card = (function (window) {
             // the image position to fixed when tween is completed.
             onComplete: function () {
                 $(this._container).addClass('card__container--fix-image');
-                document.getElementsByClassName("pattern")[0].children[0].setAttribute("hidden","")
             }.bind(this)
         });
 
