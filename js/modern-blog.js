@@ -160,7 +160,11 @@ var demo = (function (window) {
             _setPatternBgImg($(this).find(SELECTORS.cardImage).find('image'));
 
             sequence.add(tweenOtherCards);
-            sequence.add(card.openCard(_onCardMove), 0);
+
+            polygonMap.points.forEach(function (point, i) {
+
+                sequence.add($(polygonMap.paths[i]).attr('class', CLASSES.polygon + ' ' + CLASSES.polygonHidden));
+            });
 
         } else {
             // Close sequence.
@@ -279,11 +283,11 @@ var demo = (function (window) {
             }
         }
         if (toId) {
+            document.getElementsByClassName("pattern")[0].children[0].setAttribute("hidden","")
             var toBlogCard = $('[' + ATTRIBUTES.id + '="' + toId + '"]')[0];
             if (toBlogCard) {
                 _playSequence.call(toBlogCard, true, getIndex(toBlogCard));
             }
-            document.getElementsByClassName("pattern")[0].children[0].setAttribute("hidden","")
         }
     };
 
