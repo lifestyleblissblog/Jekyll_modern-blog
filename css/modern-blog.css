@@ -42,7 +42,8 @@
 /* Fix IE */
 
 .card__container--fix-image .card__image {
-	position: fixed;
+	/*position: fixed;*/
+	opacity:0;
 }
 
 .card__content {
