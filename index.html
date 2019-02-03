@@ -26,19 +26,20 @@ layout: compress
     </script>
 </head>
 <body class="body">
-<div class="container">
-    <header class="header">
-        <h1>Lifestyle Bliss<span>WITH TIFFANY LANG</span></h1>
-        <nav class="links">
-            <a href="#"><i class="fa fa-twitter-square fa-3x"></i></a>
-            <a href="#"><i class="fa fa-instagram fa-3x"></i></a>
-            <a href="#"><i class="fa fa-facebook-square fa-3x"></i></a>
-            <a href="#"><i class="fa fa-tumblr-square fa-3x"></i></a>
-        </nav>
-    </header>
-    <div class="content">
-        <!-- cards -->
-        <div style="width:100%">
+    <!-- trianglify pattern container -->
+    <div class="pattern pattern--hidden"></div>
+    <div class="container">
+        <header class="header">
+            <h1>Lifestyle Bliss<span>WITH TIFFANY LANG</span></h1>
+            <nav class="links">
+                <a href="#"><i class="fa fa-twitter-square fa-3x"></i></a>
+                <a href="#"><i class="fa fa-instagram fa-3x"></i></a>
+                <a href="#"><i class="fa fa-facebook-square fa-3x"></i></a>
+                <a href="#"><i class="fa fa-tumblr-square fa-3x"></i></a>
+            </nav>
+        </header>
+        <div class="content">
+            <!-- cards -->
             <div class="wrapper">
                 {% for post in site.posts %}
                 <div class="card" data-id="{{ post.id }}">
@@ -75,17 +76,14 @@ layout: compress
                 <!-- /cards -->
             </div>
         </div>
-        <!-- trianglify pattern container -->
-        <div class="pattern pattern--hidden"></div>
+        <!-- /container -->
     </div>
-    <!-- /container -->
-</div>
-<!-- JS -->
-<script src="js/vendors/trianglify.min.js"></script>
-<script src="js/vendors/TweenMax.min.js"></script>
-<script src="js/vendors/ScrollToPlugin.min.js"></script>
-<script src="js/vendors/cash.min.js"></script>
-<script src="js/card-modern-blog.js"></script>
-<script src="js/modern-blog.js"></script>
+    <!-- JS -->
+    <script src="js/vendors/trianglify.min.js"></script>
+    <script src="js/vendors/TweenMax.min.js"></script>
+    <script src="js/vendors/ScrollToPlugin.min.js"></script>
+    <script src="js/vendors/cash.min.js"></script>
+    <script src="js/card-modern-blog.js"></script>
+    <script src="js/modern-blog.js"></script>
 </body>
 </html>
