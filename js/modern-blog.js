@@ -173,6 +173,7 @@ var demo = (function (window) {
         }
 
         sequence.play();
+
     };
 
     /**
@@ -271,6 +272,7 @@ var demo = (function (window) {
             return parseInt(index, 10);
         };
         if (fromId) {
+            document.getElementsByClassName("pattern")[0].children[0].removeAttribute("hidden","")
             var fromBlogCard = $('[' + ATTRIBUTES.id + '="' + fromId + '"]')[0];
             if (fromBlogCard) {
                 _playSequence.call(fromBlogCard, false, getIndex(fromBlogCard));
@@ -281,6 +283,7 @@ var demo = (function (window) {
             if (toBlogCard) {
                 _playSequence.call(toBlogCard, true, getIndex(toBlogCard));
             }
+            document.getElementsByClassName("pattern")[0].children[0].setAttribute("hidden","")
         }
     };
 
