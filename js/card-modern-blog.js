@@ -57,7 +57,7 @@ var Card = (function (window) {
 
         // Compose sequence and use duration to overlap tweens.
         this._TL.add(slideContentDown);
-        //this._TL.add(clipImageIn, 0);
+        this._TL.add(clipImageIn, 0);
         this._TL.add(floatContainer, '-=' + clipImageIn.duration() * 0.6);
         // this._TL.add(clipImageOut, '-=' + floatContainer.duration() * 0.3);
         this._TL.add(slideContentUp/*, '-=' + clipImageOut.duration() * 0.6*/);
@@ -178,6 +178,7 @@ var Card = (function (window) {
             // the image position to fixed when tween is completed.
             onComplete: function () {
                 $(this._container).addClass('card__container--fix-image');
+                document.getElementsByClassName("pattern")[0].children[0].setAttribute("hidden","")
             }.bind(this)
         });
 
