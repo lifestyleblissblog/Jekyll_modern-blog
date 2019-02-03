@@ -272,13 +272,14 @@ var demo = (function (window) {
             return parseInt(index, 10);
         };
         if (fromId) {
-            //document.getElementsByClassName("pattern")[0].children[0].removeAttribute("hidden","")
+            document.getElementsByClassName("pattern")[0].children[0].removeAttribute("hidden","")
             var fromBlogCard = $('[' + ATTRIBUTES.id + '="' + fromId + '"]')[0];
             if (fromBlogCard) {
                 _playSequence.call(fromBlogCard, false, getIndex(fromBlogCard));
             }
         }
         if (toId) {
+            document.getElementsByClassName("pattern")[0].children[0].setAttribute("hidden","")
             var toBlogCard = $('[' + ATTRIBUTES.id + '="' + toId + '"]')[0];
             if (toBlogCard) {
                 _playSequence.call(toBlogCard, true, getIndex(toBlogCard));
