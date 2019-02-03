@@ -160,11 +160,7 @@ var demo = (function (window) {
             _setPatternBgImg($(this).find(SELECTORS.cardImage).find('image'));
 
             sequence.add(tweenOtherCards);
-
-            polygonMap.points.forEach(function (point, i) {
-
-                sequence.add($(polygonMap.paths[i]).attr('class', CLASSES.polygon + ' ' + CLASSES.polygonHidden));
-            });
+            sequence.add(card.openCard(_onCardMove), 0);
 
         } else {
             // Close sequence.
